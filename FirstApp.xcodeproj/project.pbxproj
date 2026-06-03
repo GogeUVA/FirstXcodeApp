@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		56935E482FCF361100FCA973 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 56935E472FCF360A00FCA973 /* README.md */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		56935E392FCF336500FCA973 /* FirstApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56935E472FCF360A00FCA973 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = README.md; sourceTree = "<group>"; };
@@ -125,7 +121,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56935E482FCF361100FCA973 /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
