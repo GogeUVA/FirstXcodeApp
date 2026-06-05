@@ -9,10 +9,13 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @State private var taskCount: Int = 0
     @Query private var tasks: [Task]
     @Environment(\.modelContext) private var modelContext
     @State private var newTaskTitle = ""
+    
+    // to dismiss keyboard
+    @FocusState private var isTextFieldFocused: Bool
+    
     var body: some View {
         VStack {
             
@@ -24,6 +27,7 @@ struct ContentView: View {
             HStack {
                 TextField("New Task", text: $newTaskTitle)
                     .textFieldStyle(.roundedBorder)
+                    .focused($isTextFieldFocused) // to dismiss keyboard
                 Button("Add") {
                     addTask()
                 }
@@ -47,6 +51,11 @@ struct ContentView: View {
             }
         }
         .padding()
+        
+        .contentShape(Rectangle()) // to dismiss keyboard
+                .onTapGesture {
+                    isTextFieldFocused = false
+                }
     }
     private func addTask() {
         let newTask = Task(title: newTaskTitle)
